@@ -1,0 +1,31 @@
+header {
+    & .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 3rem;
+    }
+
+    & .title {
+        font: 800 1.5rem/130% var(--ff-sora);
+        letter-spacing: -0.4px;
+        text-transform: uppercase;    
+    }
+
+    & .subtitle {
+        font: var(--overline);
+        text-transform: uppercase;
+        background: linear-gradient(to right, var(--content-secondary), var(--background-gray));
+        background-clip: text;
+        color: transparent;
+        margin-top: 2.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    & .title-xl {
+        font: var(--display-md);
+        text-transform: uppercase;
+    }
+
+}
