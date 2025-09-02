@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Sorteador de números online e gratuito. Rápido, fácil de usar e sem necessidade de cadastro.">
 
     <title>Sorteador de Números</title>
 
@@ -17,16 +19,51 @@
             <img src="assets/logo.svg" alt="ícone da logomarca">
             <p class="title">Number</p>
     </div>
-    
+
     <header class="container">
-        <h2 class="subtitle">Online - gratuito</h2>
-        <h1 class="title-xl">
-            Sorteador de números
-        </h3>
+        <p class="subtitle">Online - gratuito</p>
+        <h1 class="title-xl"> Sorteador de números </h1>
     </header>
 
-    <main id="app" class="container">
+    <main class="container">
+        <div class="content-form">
+            <h3>Quero sortear:</h3> 
+            <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+        </div>
+        <form action="#">
+            <div class="wrapper">
+                <div class="wrapper-number">
+                    <label for="number">Números</label>
+                    <input type="number" id="number">
+                </div>
+                <div class="wrapper-number">
+                    <label for="min-number">de</label>
+                    <input type="number" id="min-number">
+                </div>
+                <div class="wrapper-number">
+                    <label for="max-number">de</label>
+                    <input type="number" id="max-number">
+                </div>
+            </div>
+            
+            <!-- TODO: Flag de não repetir numero-->
+            <div>
+                <div>
+                    <button></button>
+                    <span></span>
+                </div>
+                <p>Não repetir número</p>
+            </div>
 
+            <button class="draw" type="button">
+                <p>sortear</p>
+                <img src="assets/icon-arrow.svg" alt="">
+            </button>
+        </form>
     </main>
+
+    <div class="container" id="questions">
+    </div>
+
 </body>
 </html>

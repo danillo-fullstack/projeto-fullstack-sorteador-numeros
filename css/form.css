@@ -1,0 +1,90 @@
+form {
+    margin-top: 2.5rem;
+    
+    & > div {
+        display: flex;
+        gap: 12px;
+    }
+
+    & .wrapper-number {
+        margin-bottom: 1.25rem;
+
+        & label {
+            display: block;
+            font: var(--label-md);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 8px;
+            transition: color 200ms ease;
+        } 
+
+        & input[type="number"] {
+            border: 2px transparent;
+            display: block;
+            width: 6rem;
+            padding: 8px 4px;
+            text-align: center;
+            appearance: none;
+            font: var(--display-sm);
+            color: var(--content-primary);
+            background-color: var(--background-primary);
+            transition: background-color 200ms ease;
+            
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        } 
+
+        & input[type="number"]:focus {
+            border: 2px solid;
+            border-image: var(--gradient-border) 1;
+            outline: none;
+        }
+    }
+
+    & .wrapper-number:hover {
+        & input[type="number"] {
+            background-color: var(--background-tertiary);
+            cursor: pointer;                  
+        }
+
+        & label {
+            cursor: pointer;
+            color: var(--content-brand);
+        }
+    }
+
+    & .wrapper-number:focus-within {
+        & input[type="number"] {
+            background-color: var(--background-tertiary);
+            cursor: pointer;       
+        }
+
+        & label {
+            cursor: pointer;
+            color: var(--content-brand);
+        }
+    }
+
+    & .draw {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        background-color: var(--background-tertiary);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 2.5rem;
+
+        & p {
+           text-transform: uppercase;
+           font: var(--label-md);
+           color: var(--content-primary); 
+           padding-block: 1rem;
+        }
+    }
+}

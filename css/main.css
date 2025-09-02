@@ -1,0 +1,17 @@
+@import url(form.css);
+
+main {
+    & .content-form {
+        margin-top: 2.625rem;
+
+        & h3 {
+            font: var(--label-md);
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        & p {
+            font: var(--paragraph-md);
+        }
+    }
+}
