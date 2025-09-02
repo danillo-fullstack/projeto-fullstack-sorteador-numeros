@@ -1,18 +1,18 @@
-header {
-    & .logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-        margin-top: 3rem;
-    }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 3rem;
 
     & .title {
         font: 800 1.5rem/130% var(--ff-sora);
         letter-spacing: -0.4px;
         text-transform: uppercase;    
     }
+}
 
+header {
     & .subtitle {
         font: var(--overline);
         text-transform: uppercase;
@@ -27,5 +27,4 @@ header {
         font: var(--display-md);
         text-transform: uppercase;
     }
-
 }
