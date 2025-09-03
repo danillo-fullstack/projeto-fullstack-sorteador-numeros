@@ -1,0 +1,28 @@
+#questions {
+    margin-top: 5rem;
+
+    & .question {
+        margin-bottom: 2rem;
+        
+        & dt {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font: var(--paragraph-md);
+            
+            & svg path {
+                stroke: var(--content-brand);
+            } 
+
+            & p {
+                color: var(--content-brand);
+            }
+        }
+
+        & dd {
+            font: var(--paragraph-sm);
+            margin-left: 2rem;
+            color: var(--content-secondary);
+        }
+    }
+}
