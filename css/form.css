@@ -19,7 +19,7 @@ form {
         } 
 
         & input[type="number"] {
-            border: 2px transparent;
+            border: 2px solid transparent;
             display: block;
             width: 6rem;
             padding: 8px 4px;
@@ -38,7 +38,7 @@ form {
         } 
 
         & input[type="number"]:focus {
-            border: 2px solid;
+            border: 2px solid transparent;
             border-image: var(--gradient-border) 1;
             outline: none;
         }
@@ -85,6 +85,48 @@ form {
            font: var(--label-md);
            color: var(--content-primary); 
            padding-block: 1rem;
+        }
+    }
+
+    & .wrapper-switch {
+        display: flex;
+        align-items: center;
+
+        & #switch {
+            position: relative;
+            cursor: pointer;
+
+            & button {
+                position: absolute;
+                right: 3px;
+                top: 50%;
+                border-radius: 50%;
+                border: 0;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 14px;
+                background-color: var(--content-primary);
+                cursor: pointer;
+
+                &.switch-uncheck {
+                    right: 0;
+                    left: 3px;
+                }
+            }
+
+            & span {
+                display: block; 
+                width: 30px;
+                height: 20px;
+                border-radius: 16px;
+                background: var(--gradient-background);
+            }
+
+            
+        }
+
+        & p {
+            font: var(--paragraph-md);
         }
     }
 }
