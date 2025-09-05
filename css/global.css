@@ -58,11 +58,41 @@ img {
     height: auto;
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     padding-inline: 1rem;
     max-width: 21.5rem;
     margin-inline: auto;
 }
+
+.draw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--background-tertiary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 2.5rem;
+
+    & p {
+        text-transform: uppercase;
+        font: var(--label-md);
+        color: var(--content-primary); 
+        padding-block: 1rem;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+
 
 
 

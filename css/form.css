@@ -1,6 +1,6 @@
 form {
     margin-top: 2.5rem;
-    
+
     & > div {
         display: flex;
         gap: 12px;
@@ -68,26 +68,6 @@ form {
         }
     }
 
-    & .draw {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        width: 100%;
-        background-color: var(--background-tertiary);
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        margin-top: 2.5rem;
-
-        & p {
-           text-transform: uppercase;
-           font: var(--label-md);
-           color: var(--content-primary); 
-           padding-block: 1rem;
-        }
-    }
-
     & .wrapper-switch {
         display: flex;
         align-items: center;
@@ -128,5 +108,29 @@ form {
         & p {
             font: var(--paragraph-md);
         }
+    }
+}
+
+.show-result {
+    & .content-form {
+        & h3, & p {
+            text-align: center;
+        }
+
+        & p {
+            color: var(--content-secondary);
+            text-transform: uppercase;
+            font: var(--overline);
+        }
+    }
+
+    & ul {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2.5rem;
+        font: 700 3rem/150% "Roboto mono", sans-serif;
+        color: var(--content-brand);
     }
 }
