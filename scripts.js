@@ -11,8 +11,10 @@ const number = document.querySelector('#number');
 const minNumber = document.querySelector('#min-number');
 const maxNumber = document.querySelector('#max-number');
 
+// Track que permite ou não repetição de numero
+const button = document.querySelector('#switch button');
+
 track.addEventListener('click', () => {
-    const button = document.querySelector('#switch button');
     button.classList.toggle('switch-uncheck');
 });
 
@@ -24,10 +26,10 @@ form.addEventListener('submit', (event) => {
         inputClear();
         return;
     } 
+
     showForm.classList.add('hide');
     showResult.classList.remove('hide');
     prizeNumber();
-
 });
 
 [number, minNumber, maxNumber].forEach(input => {
@@ -42,7 +44,6 @@ sortearNovamente.addEventListener('click', () => {
     inputClear();
 });
 
-
 function inputClear() {
     number.value = "";
     minNumber.value = "";
@@ -51,10 +52,38 @@ function inputClear() {
 }
 
 function prizeNumber() {
-    for (let index = 1; index <= number.value; index++) {
-        const li = document.createElement('li');
-        li.textContent = index;
-        viewResult.append(li);
+    viewResult.innerHTML = '';
+
+    const total = Number(number.value);
+    const min = Number(minNumber.value);
+    const max = Number(maxNumber.value);
+
+    const permitirRepeticao = button.classList.contains('switch-uncheck');
+
+    if (permitirRepeticao) {
+        for (let index = 1; index <= total; index++) {
+            const li = document.createElement('li');
+            li.textContent = sortearNumero(min, max);
+            viewResult.append(li);
+        }
+    } else {
+        const numerosDisponiveis = [];
+        for(let i = min; i <= max; i++) {
+            numerosDisponiveis.push(i);
+        }
+
+        for(let i = min; i<=total; i++) {
+            if (numerosDisponiveis.length === 0) {
+                break;
+            }
+
+            const index = Math.floor(Math.random() * numerosDisponiveis.length);
+            const li = document.createElement('li');
+            li.textContent = numerosDisponiveis[index];
+            viewResult.append(li);
+
+            numerosDisponiveis.splice(index, 1);
+        }
     }
 }
 
@@ -64,3 +93,6 @@ function validatedNumber() {
     }
 }
 
+function sortearNumero(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
