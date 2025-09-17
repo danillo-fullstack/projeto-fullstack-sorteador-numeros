@@ -111,6 +111,12 @@ form {
     }
 }
 
+.show-form {
+    & .content-form p {
+        color: var(--content-tertiary);
+    }
+}
+
 .show-result {
     & .content-form {
         & h3, & p {
@@ -132,5 +138,45 @@ form {
         margin-top: 2.5rem;
         font: 700 3rem/150% "Roboto mono", sans-serif;
         color: var(--content-brand);
+    }
+}
+
+.draw {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    & img {
+        transform: translateX(0);
+        transition: transform 0.3s ease;
+    }   
+}
+
+.draw:hover {
+    border-image: var(--gradient-border) 1;
+    border-radius: 8px;
+     & img {
+        animation: moveArrowIn 0.3s forwards;
+    }
+}
+
+.draw:not(:hover) img {
+    animation: moveArrowOut 0.3s forwards;
+}
+
+@keyframes moveArrowIn {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(8px);
+    }
+}
+
+@keyframes moveArrowOut {
+    from {
+        transform: translateX(8px);
+    } 
+    to {
+        transform: translateX(0);
     }
 }
