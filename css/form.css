@@ -145,21 +145,21 @@ form {
     border: 2px solid transparent;
     border-radius: 8px;
     transition: 0.3s ease;
-    & img {
+    & .arrow {
         transform: translateX(0);
         transition: transform 0.3s ease;
-    }   
+    }  
 }
 
 .draw:hover {
     border-image: var(--gradient-border) 1;
     border-radius: 8px;
-     & img {
+     & .arrow {
         animation: moveArrowIn 0.3s forwards;
     }
 }
 
-.draw:not(:hover) img {
+.draw:not(:hover) .arrow {
     animation: moveArrowOut 0.3s forwards;
 }
 
