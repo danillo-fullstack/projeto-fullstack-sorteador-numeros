@@ -138,6 +138,17 @@ form {
         margin-top: 2.5rem;
         font: 700 3rem/150% "Roboto mono", sans-serif;
         color: var(--content-brand);
+
+       /* & li {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        & li.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
     }
 }
 

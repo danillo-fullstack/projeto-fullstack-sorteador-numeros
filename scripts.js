@@ -72,7 +72,7 @@ function prizeNumber() {
             numerosDisponiveis.push(i);
         }
 
-        for(let i = min; i<=total; i++) {
+        for(let i = 1; i <= total; i++) {
             if (numerosDisponiveis.length === 0) {
                 break;
             }
