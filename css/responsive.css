@@ -1,0 +1,36 @@
+@media (min-width: 1024px) {
+    #app {
+        max-width: 1024px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "logo logo"
+                              "header main"
+                              "questions main";
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        & .logo {
+            grid-area: logo;
+            display: flex;
+            justify-self: start;            
+        }
+
+        & header, & #questions {
+            margin-right: 6.5rem;
+        }
+
+        & header {
+            grid-area: header;
+        }
+
+        & main {
+            grid-area: main;
+
+            & .draw.reload{
+                padding-inline: 1rem;
+            }
+        }
+    }
+
+}
